@@ -1,0 +1,5 @@
+{
+    "editor.matchBrackets": false,
+    "css.lint.universalSelector": "warning",
+    "less.lint.idSelector": "warning"
+}
