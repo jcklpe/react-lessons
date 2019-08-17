@@ -1,19 +1,9 @@
-import React from 'react';
-import './Person.css';
+import React from "react";
 
-const Person = (props) =>
-{
-    return (
-        <div className="Person">
-            <p onClick={props.click}>
-                I'm {props.name}, and I am {props.age} years old
-            </p>
-            <p>
-                {props.children}
-            </p>
-            <input type="text" onChange={props.changed} value={props.name} />
-        </div>
-    )
+const person = () => {
+  return (
+    <p>I'm a person and I'm {Math.floor(Math.random() * 30)} years old </p>
+  );
 };
 
-export default Person;
+export default person;
