@@ -3,12 +3,7 @@ import "./UserInput.css";
 import { directive } from "@babel/types";
 
 const userInput = props => {
-  return (
-    <div>
-      <p>one</p>
-      <p>2</p>
-    </div>
-  );
+  return <input onChange={props.changed} value={props.currentName} />;
 };
 
 export default userInput;
