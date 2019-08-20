@@ -29,15 +29,15 @@ class App extends Component {
       ...this.state.persons[personIndex]
     };
 
-    const person = Object.assign({}, this.state.persons[personIndex]);
+    // this is apparently the old way of doing it
+    //const person = Object.assign({}, this.state.persons[personIndex]);
 
-    this.setState({
-      persons: [
-        { id: "fdad", name: "dang", age: 29 },
-        { id: "fsf", name: event.target.value, age: 29 },
-        { id: "dasf", name: "george", age: 29 }
-      ]
-    });
+    const persons = [...this.state.persons];
+    persons[personIndex] = person;
+
+    person.name = event.target.value;
+
+    this.setState({ persons: persons });
   };
 
   togglePersonsHandler = () => {
